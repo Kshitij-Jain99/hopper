@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/Kshitij-Jain99/hopper.git/api/routes"
+	"github.com/Kshitij-Jain99/hopper/api/routes"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/joho/godotenv"

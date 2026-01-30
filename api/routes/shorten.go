@@ -3,7 +3,8 @@ package routes
 import (
 	"time"
 
-	"github.com/Kshitij-Jain99/hopper.git/api/helpers"
+	"github.com/Kshitij-Jain99/hopper/api/helpers"
+	"github.com/gofiber/fiber/v2"
 )
 
 type request struct {
@@ -31,7 +32,7 @@ func ShortenURL(c *fiber.Ctx) error {
 
 	//check if the input if an actual URL
 
-	if !govalidator.IsURL(body.URL) {
+	if !goValidator.IsURL(body.URL) {
 		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{"error": "url is invalid"})
 	}
 
